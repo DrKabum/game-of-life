@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+	--dark-clr: hsl(0, 0%, 10%);
+	--dark-clr-hover: hsl(0, 0%, 30%);
+	--border-grey: hsl(0, 0%, 70%);
+	--white-clr: hsl(0, 100%, 100%);
+	font-size: 18px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	height: 100vh;
+	padding: 1em;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+#app {
+	display: grid;
+	height: 100%;
+	width: 50em;
+	border: 1px solid var(--dark-clr);
+	grid-template-columns: repeat(50, 1fr);
+}
+
+#turn-count {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0.5em;
+	padding: 0.5em 1em;
+	border-radius: 0.5em;
+	background-color: var(--dark-clr);
+	color: var(--white-clr);
+}
+
+.cell {
+	border: 1px solid var(--border-grey);
+}
+
+.alive {
+	background-color: var(--dark-clr);
+	color: var(--white-clr);
+}
+
+.controls {
+	margin-top: 1em;
+	background-color: var(--dark-clr);
+	border-radius: 1em;
+	padding: 0 1em;
+}
+
+.btn {
+	font-family: inherit;
+	border: none;
+	margin: 0;
+	padding: 1em 2em;
+}
+
+.btn-primary {
+	background: var(--dark-clr);
+	color: var(--white-clr);
+	transition: 0.2s ease-in-out;
+}
+
+.btn-secondary {
+	background: var(--white-clr);
+	color: var(--dark-clr);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+	background: var(--dark-clr-hover);
+	color: hsl(0, 50%, 50%);
+	cursor: pointer;
+}
+
+.info {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50vw;
+	min-height: 50vh;
+	background: hsla(0, 0%, 0%, 0.8);
+	color: var(--white-clr);
+	padding: 2em;
+	border-radius: 1em;
+}
+
+#info-close {
+	margin-top: 1em;
+	border-radius: 1em;
+}
+
+p {
+	margin: 1em;
+}
+
+a {
+	color: hsl(0, 50%, 50%);
+}
+
+.hidden {
+	display: none;
+}

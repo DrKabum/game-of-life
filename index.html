@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+			integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="index.js" defer></script>
+		<title>Game of Life</title>
+	</head>
+	<body>
+		<div id="turn-count"></div>
+		<div id="app" ondrag="return false"></div>
+		<div class="controls">
+			<button id="reset-btn" class="btn btn-primary">
+				<i class="fas fa-sync-alt"></i>
+			</button>
+			<button id="pause-btn" class="btn btn-primary">
+				<i class="fas fa-pause"></i>
+			</button>
+			<button id="start-btn" class="btn btn-primary">
+				<i class="fas fa-step-forward"></i>
+			</button>
+			<button id="fast-btn" class="btn btn-primary">
+				<i class="fas fa-forward"></i>
+			</button>
+			<button id="faster-btn" class="btn btn-primary">
+				<i class="fas fa-forward"></i><i class="fas fa-forward"></i>
+			</button>
+			<button id="fastest-btn" class="btn btn-primary">
+				<i class="fas fa-forward"></i><i class="fas fa-forward"></i
+				><i class="fas fa-forward"></i>
+			</button>
+		</div>
+		<div class="info" id="info-window">
+			<p>Welcome to my Game of Life !</p>
+			<p>
+				In this game, you draw cells on the board and hit the play button,
+				and/or set the speed at which the game will play.
+			</p>
+			<p>Rules are simple :</p>
+			<ul>
+				<li>Any live cell with two or three live neighbours survives.</li>
+				<li>Any dead cell with three live neighbours becomes a live cell.</li>
+				<li>
+					All other live cells die in the next generation. Similarly, all other
+					dead cells stay dead.
+				</li>
+			</ul>
+			<p>
+				Things that can emerge from this simple steps can be just amazing. Try
+				it !
+			</p>
+			<a
+				href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life"
+				target="_blank"
+				>Want to know more about Conway's Game of life ?</a
+			>
+			<button id="info-close" class="btn btn-secondary">Close</button>
+		</div>
+	</body>
+</html>
